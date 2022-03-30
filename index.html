@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+
+        let model ={
+    input: {
+        username: "",
+        password: "",
+    },
+    users: [
+        {
+          username: "1",
+          Password: "1"
+        },
+        {
+          username: "Bond",
+          Password: "007"
+        },
+        {
+            username: "redbull",
+            password: "vinger"
+        }
+    ],
+}
+
+        show();
+    function show(){
+        let html="";
+        
+    html += `
+        <input type="text" placeholder="Username or mail address" oninput="model.input.username = this.value">
+        <input type="text" placeholder="Password" oninput="model.input.password = this.value">
+        <button onclick="logIn()">submit</button>
+        `
+        document.getElementById('app').innerHTML = html;
+    }
+
+function logIn(){
+    for(let i=0; i < model.users.length; i++) {
+        if(model.users[i].username == model.input.username && model.users[i].password){
+            alert("hei")
+                return
+        }
+        // else if(i==model.users.length -1){
+        //     alert("May the blade breath fire")
+        
+    }
+}
+    </script>
+</body>
+</html>
+<!--  -->
