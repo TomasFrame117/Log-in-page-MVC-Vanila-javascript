@@ -47,16 +47,16 @@
 
 function logIn(){
     for(let i=0; i < model.users.length; i++) {
-        if(model.users[i].username == model.input.username && model.users[i].password){
+        if(model.users[i].username == model.input.username && model.users[i].password == model.input.password){
             alert("hei")
-                return
-        }
-        // else if(i==model.users.length -1){
-        //     alert("May the blade breath fire")
-        
+            return
+     }
+    else if(i == model.users.length -1){
+             alert("May the blade breath fire")
     }
+}
+
 }
     </script>
 </body>
 </html>
-<!--  -->
